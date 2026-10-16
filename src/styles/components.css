@@ -1,0 +1,195 @@
+/* src/styles/components.css */
+
+/* ===== Navbar ===== */
+.navbar {
+  @apply fixed top-0 left-0 right-0 z-50 transition-all duration-300;
+}
+
+.navbar-scrolled {
+  @apply bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg shadow-lg;
+}
+
+.navbar-transparent {
+  @apply bg-transparent;
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+  @apply relative min-h-screen flex items-center overflow-hidden;
+}
+
+.hero-background {
+  @apply absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900;
+}
+
+.hero-content {
+  @apply relative z-10 w-full;
+}
+
+/* ===== Cards ===== */
+.card-hover {
+  @apply hover:transform hover:scale-[1.02] hover:shadow-2xl transition-all duration-300;
+}
+
+.card-gradient {
+  @apply bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900;
+}
+
+/* ===== Buttons ===== */
+.btn-icon {
+  @apply p-2 rounded-full transition-all duration-200;
+}
+
+.btn-icon-primary {
+  @apply bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 hover:bg-blue-200 dark:hover:bg-blue-800/30;
+}
+
+.btn-icon-danger {
+  @apply bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 hover:bg-red-200 dark:hover:bg-red-800/30;
+}
+
+/* ===== Forms ===== */
+.form-group {
+  @apply space-y-2;
+}
+
+.form-error {
+  @apply text-sm text-red-500 mt-1;
+}
+
+.form-success {
+  @apply text-sm text-green-500 mt-1;
+}
+
+/* ===== Tables ===== */
+.table-container {
+  @apply overflow-x-auto shadow-lg rounded-2xl;
+}
+
+.table-header {
+  @apply bg-gray-50 dark:bg-gray-700/50;
+}
+
+.table-row {
+  @apply hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors;
+}
+
+/* ===== Modals ===== */
+.modal-overlay {
+  @apply fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4;
+}
+
+.modal-container {
+  @apply bg-white dark:bg-gray-800 rounded-2xl w-full max-w-lg max-h-[90vh] flex flex-col shadow-2xl;
+}
+
+.modal-header {
+  @apply flex items-center justify-between p-5 border-b border-gray-200 dark:border-gray-700;
+}
+
+.modal-body {
+  @apply flex-1 overflow-y-auto p-5;
+}
+
+.modal-footer {
+  @apply p-5 border-t border-gray-200 dark:border-gray-700 flex justify-end gap-3;
+}
+
+/* ===== Toast ===== */
+.toast-container {
+  @apply fixed top-4 right-4 z-50 space-y-3 max-w-sm w-full;
+}
+
+.toast {
+  @apply relative rounded-xl shadow-2xl border-l-4 overflow-hidden animate-slide-in-right;
+}
+
+.toast-success {
+  @apply bg-green-50 dark:bg-green-900/30 border-green-500;
+}
+
+.toast-error {
+  @apply bg-red-50 dark:bg-red-900/30 border-red-500;
+}
+
+.toast-warning {
+  @apply bg-yellow-50 dark:bg-yellow-900/30 border-yellow-500;
+}
+
+.toast-info {
+  @apply bg-blue-50 dark:bg-blue-900/30 border-blue-500;
+}
+
+/* ===== Loading Spinner ===== */
+.spinner {
+  @apply w-12 h-12 rounded-full border-4 border-gray-200 dark:border-gray-700;
+}
+
+.spinner-active {
+  @apply border-blue-600 border-t-transparent animate-spin;
+}
+
+/* ===== Skeleton ===== */
+.skeleton-text {
+  @apply h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse;
+}
+
+.skeleton-circle {
+  @apply rounded-full bg-gray-200 dark:bg-gray-700 animate-pulse;
+}
+
+.skeleton-card {
+  @apply bg-white dark:bg-gray-800 rounded-2xl p-5 shadow-lg;
+}
+
+/* ===== Tags/Badges ===== */
+.tag {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.tag-primary {
+  @apply bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400;
+}
+
+.tag-success {
+  @apply bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400;
+}
+
+.tag-danger {
+  @apply bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400;
+}
+
+.tag-warning {
+  @apply bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400;
+}
+
+.tag-gray {
+  @apply bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300;
+}
+
+/* ===== Timeline ===== */
+.timeline-item {
+  @apply relative pl-8 pb-8 last:pb-0;
+}
+
+.timeline-dot {
+  @apply absolute left-0 top-1 w-6 h-6 rounded-full flex items-center justify-center;
+}
+
+.timeline-line {
+  @apply absolute left-3 top-8 bottom-0 w-0.5;
+}
+
+/* ===== Stats ===== */
+.stat-card {
+  @apply bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105;
+}
+
+.stat-icon {
+  @apply p-3 rounded-xl;
+}
+
+/* ===== Social Links ===== */
+.social-link {
+  @apply w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white flex items-center justify-center transition-all duration-300 border border-white/20 hover:border-white/40;
+}
